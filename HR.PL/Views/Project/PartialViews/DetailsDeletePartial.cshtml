@@ -1,0 +1,16 @@
+﻿@model Project
+@{
+    var departments = new SelectList(ViewBag.Departments, "Id", "Name");
+}
+<div class="form-group">
+    <label class="col-form-label" asp-for="Name"></label>
+    <input class="form-control" asp-for="Name" readonly></input>
+</div>
+
+<br />
+<div class="form-group">
+    <label class="col-form-label" asp-for="Department"></label>
+    <input class="form-control" asp-for="Department.Name" readonly />
+</div>
+<br />
+<br />

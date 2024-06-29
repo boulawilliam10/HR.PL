@@ -1,0 +1,46 @@
+﻿@model WorksViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    var employees = new SelectList(ViewBag.Employees, "Id", "Name");
+    var projects = new SelectList(ViewBag.Projects, "Id", "Name");
+
+}
+
+
+<h1>Create</h1>
+
+<form asp-action="Create">
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Employee"></label>
+        <select class="form-control" asp-items="@employees" asp-for="EmployeeId">
+            <option value="@null">------Select Employee------</option>
+        </select>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Project"></label>
+        <select class="form-control" asp-items="@projects" asp-for="ProjectId">
+            <option value="@null">------Select Project------</option>
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="col-form-label" asp-for="NumOfHours"></label>
+        <input class="form-control" asp-for="NumOfHours" />
+        <span asp-validation-for="NumOfHours" class="text-danger"></span>
+    </div>
+
+    <br />
+    <br />
+
+
+    <input type="submit" value="Submit" class="btn btn-primary" /> ||
+    <a asp-action="Index" class="btn btn-outline-success">Back To List</a>
+</form>
+
+
+@section ValidationScriptsPartial {
+    <partial name="_ValidationScriptsPartial" />
+}

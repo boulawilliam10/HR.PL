@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 25px;
+    z-index: 1;
+    width: 80%;
+    margin: 25px auto;
+    color: #157fcf;
+}
+
+.navbar {
+    background: #157fcf;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-toggler {
+    background: white;
+}
+
+.Container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+
+.Container h1 {
+    color: #157fcf;
+    margin-bottom:25px;
+}
+
+.Container .Thebtns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+    .Container .Thebtns .btn {
+        flex-grow: 1;
+        flex-basis: 200;
+    }
+
+.navbar-nav .Sign {
+    margin-left: auto;
+}
